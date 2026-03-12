@@ -1,6 +1,7 @@
 package com.demoqa.base;
 
 import com.base.BasePage;
+import com.demoqa.pages.FormsPage;
 import com.demoqa.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +14,7 @@ public class BaseTest {
     protected WebDriver driver;
     protected BasePage basePage;
     protected HomePage homePage;
+    protected FormsPage formsPage;
     private String url = "https://demoqa.com/";
 
     @BeforeClass
@@ -24,6 +26,7 @@ public class BaseTest {
         basePage.setDriver(driver);
         setUtilityDriver();
         homePage = new HomePage();
+        formsPage = new FormsPage();
     }
 
     @AfterClass
