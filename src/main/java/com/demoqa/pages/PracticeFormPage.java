@@ -1,12 +1,16 @@
 package com.demoqa.pages;
 
+import com.base.BasePage;
 import org.openqa.selenium.By;
 
-public class PracticeFormPage extends FormsPage{
+public class PracticeFormPage extends BasePage {
     private final By femaleRadioButton = By.xpath("//input[@value='Female']");
 
-    public boolean selectFemaleRadioButton(){
+    public void clickFemaleRadioButton() {
         click(femaleRadioButton);
+    }
+
+    public boolean IsFemaleRadioButtonSelected() {
         return find(femaleRadioButton).isSelected();
 
     }

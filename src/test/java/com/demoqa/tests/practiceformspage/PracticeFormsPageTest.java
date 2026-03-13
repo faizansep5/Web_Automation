@@ -10,6 +10,7 @@ public class PracticeFormsPageTest extends BaseTest {
     void testIsFemaleRadioBtnSelected(){
         var formsPage = homePage.gotoForms();
         var practiceFormPage = formsPage.clickPracticeForm();
-        Assert.assertTrue(practiceFormPage.selectFemaleRadioButton(), "Female radio button is not selected");
+        practiceFormPage.clickFemaleRadioButton();
+        Assert.assertTrue(practiceFormPage.IsFemaleRadioButtonSelected(), "Female radio button is not selected");
     }
 }
