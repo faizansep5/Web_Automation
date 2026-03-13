@@ -13,4 +13,17 @@ public class PracticeFormsPageTest extends BaseTest {
         practiceFormPage.clickFemaleRadioButton();
         Assert.assertTrue(practiceFormPage.IsFemaleRadioButtonSelected(), "Female radio button is not selected");
     }
+
+    @Test
+    void testIsReadingCheckboxSelected(){
+        var formsPage = homePage.gotoForms();
+        var practiceFormPage = formsPage.clickPracticeForm();
+        practiceFormPage.clickSportsCheckbox();
+        practiceFormPage.clickReadingCheckbox();
+        practiceFormPage.clickMusicCheckbox();
+
+        practiceFormPage.unclickReadingCheckbox();
+        Assert.assertFalse(practiceFormPage.readingCheckboxIsSelected(), "Reading checkbox is selected");
+
+    }
 }
