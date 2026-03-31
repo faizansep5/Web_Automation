@@ -28,6 +28,10 @@ public class BasePage {
         find(locator).click();
     }
 
+    protected void click(WebElement element){
+        element.click();
+    }
+
     protected void waitForClick(By locator, long seconds){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
