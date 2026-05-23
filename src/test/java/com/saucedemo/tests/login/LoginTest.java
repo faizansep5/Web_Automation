@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test(groups="smoke")
     public void testLoginErrorMessage(){
         loginPage.setUsername("standard_user");
         loginPage.setPassword("wrong_password");
